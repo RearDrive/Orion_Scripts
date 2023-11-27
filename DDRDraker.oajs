@@ -1,0 +1,45 @@
+//#include DDRcomm.oajs
+
+
+//Draker Profile
+var pets_type =' 0x0190|0x0191'
+var ci = 0 //Champ rounds
+var Atlas = Orion.FindType(0x9C16, 0x0497)
+var BankBell = Orion.FindType(0x091A,0x0489,'recurse')
+var t = 0
+var trashbag = Orion.FindType(0x09B2, 0x0495)
+var lootbag = Orion.FindType(0x09B2, 0x0491)
+var goldbag = Orion.FindType(0x09B2, 0x0496)
+var BWbag = 0x4274576B
+var Wbag = 0x4274576B  //Orion.FindType(0x232A,'-1',Player.BankSerial())
+var intbag = 0x405B302C //dump from lootbag
+var PSbook = Orion.FindType(0x2259,0x0481,Wbag,'fast')
+var MasterKey = Orion.FindType(0x176B, 0x0481)
+var lumber = '0x1BDD|0x09AA|0x1BD7|0x318F|0x3199|0x3191|0x3190|0x2F5F'
+var deed_storage = Orion.FindType(0x1E81, 0x0000)
+var augment_storage = 0x4006F1B0  //Orion.FindType(0x0E76, 0x0481)
+
+function Autostart()
+{
+Orion.Wait(3000)
+//Orion.Exec('HealPet')
+VoteStand()
+//Orion.Exec('BuyPS')
+}
+
+
+function Vote24(){
+var vote_log = Orion.NewFile()
+vote_log.Append(Player.Name() + '_vote_rec.txt');
+vote_log.Write(Orion.Date() + Orion.Time() + '\n');
+
+vote_log.Open('/');
+Orion.Print(vote_log.ReadLine(0))
+}
+
+function ChampAlleyF(){
+FLAtlas(115,1,203,1315,982)
+Orion.Exec('AttackC')
+}
+
+//	 (gump1.ID() === '0x3CA79EA8')) Server restart message gump id
