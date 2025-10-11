@@ -1,22 +1,22 @@
 //#include DDRcomm.oajs
 
 //Stark Profile
-var pets_type =' 0x0190|0x0191'
+const pets_type =' 0x0190|0x0191'
 var ci = 0 //Champ rounds
-var Atlas = Orion.FindType(0x9C16, 0x0497)
-var BankBell = Orion.FindType(0x091A,0x0489,'recurse')
+const Atlas = Orion.FindType(0x9C16, 0x0497)
+const BankBell = Orion.FindType(0x091A,0x0489,'recurse')
 var t = 0
-var trashbag = Orion.FindType(0x09B2, 0x0495)
-var lootbag = Orion.FindType(0x09B2, 0x0491)
-var goldbag = Orion.FindType(0x09B2, 0x0496)
-var BWbag = 0x4274576B
+const trashbag = Orion.FindType(0x09B2, 0x0495)
+const lootbag = Orion.FindType(0x09B2, 0x0491)
+const goldbag = Orion.FindType(0x09B2, 0x0496)
+const BWbag = 0x4274576B
 var Wbag = 0x40324301  //Orion.FindType(0x232A,'-1',Player.BankSerial())
-var intbag = 0x405B302A //dump from lootbag
-var PSbook = Orion.FindType(0x2259,0x0481,Wbag,'fast')
-var MasterKey = Orion.FindType(0x176B, 0x0481)
-var lumber = '0x1BDD|0x09AA|0x1BD7|0x318F|0x3199|0x3191|0x3190|0x2F5F'
-var deed_storage = Orion.FindType(0x1E81, 0x0000)
-var augment_storage = 0x40421B4A //Orion.FindType(0x0E76, 0x0481)
+const intbag = 0x405B302A //dump from lootbag
+const PSbook = Orion.FindType(0x2259,0x0481,Wbag,'fast')
+const MasterKey = Orion.FindType(0x176B, 0x0481)
+const lumber = '0x1BDD|0x09AA|0x1BD7|0x318F|0x3199|0x3191|0x3190|0x2F5F'
+const deed_storage = Orion.FindType(0x1E81, 0x0000)
+const augment_storage = 0x40421B4A //Orion.FindType(0x0E76, 0x0481)
 
 function Autostart()
 {
